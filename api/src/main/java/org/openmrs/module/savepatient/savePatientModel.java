@@ -13,9 +13,10 @@
  */
 package org.openmrs.module.savepatient;
 
-import java.io.Serializable;
-import org.openmrs.BaseOpenmrsObject;
 import org.openmrs.BaseOpenmrsMetadata;
+import org.openmrs.BaseOpenmrsObject;
+
+import java.io.Serializable;
 
 /**
  * It is a model class. It should extend either {@link BaseOpenmrsObject} or {@link BaseOpenmrsMetadata}.
@@ -24,16 +25,45 @@ public class savePatientModel extends BaseOpenmrsObject implements Serializable 
 
 	private static final long serialVersionUID = 1L;
 	
-	private Integer id;
-	
-	@Override
-	public Integer getId() {
-		return id;
-	}
-	
-	@Override
-	public void setId(Integer id) {
-		this.id = id;
-	}
-	
+	private Integer national_id;
+    private String country;
+    private String spouse;
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public void setNational_id(Integer national_id) {
+        this.national_id = national_id;
+    }
+
+    public void setSpouse(String spouse) {
+        this.spouse = spouse;
+    }
+
+    public Integer getNational_id() {
+        return national_id;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
+
+    public String getSpouse() {
+        return spouse;
+    }
+
+    @Override
+    public Integer getId() {
+        return national_id;
+    }
+
+    @Override
+    public void setId(Integer national_id) {
+        this.national_id = national_id;
+    }
 }
