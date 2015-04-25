@@ -13,7 +13,10 @@
  */
 package org.openmrs.module.savepatient.api.db;
 
+import org.openmrs.module.savepatient.PatientModel;
 import org.openmrs.module.savepatient.api.SavePatientService;
+
+import java.util.List;
 
 /**
  *  Database methods for {@link SavePatientService}.
@@ -23,4 +26,11 @@ public interface SavePatientDAO {
 	/*
 	 * Add DAO methods here
 	 */
+    List<PatientModel> listPatients();
+
+    PatientModel getPatient(Integer national_id );
+
+    PatientModel savePatient(PatientModel patientModel);
+    void deletePatient(PatientModel patientModel);
+
 }
