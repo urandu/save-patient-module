@@ -16,7 +16,10 @@ package org.openmrs.module.savepatient.api.db.hibernate;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.hibernate.SessionFactory;
+import org.openmrs.module.savepatient.PatientModel;
 import org.openmrs.module.savepatient.api.db.SavePatientDAO;
+
+import java.util.List;
 
 /**
  * It is a default implementation of  {@link SavePatientDAO}.
@@ -38,5 +41,25 @@ public class HibernateSavePatientDAO implements SavePatientDAO {
      */
     public SessionFactory getSessionFactory() {
 	    return sessionFactory;
+    }
+
+    @Override
+    public List<PatientModel> listPatients() {
+        return null;
+    }
+
+    @Override
+    public PatientModel getPatient(Integer national_id) {
+        return null;
+    }
+
+    @Override
+    public PatientModel savePatient(PatientModel patientModel) {
+        return null;
+    }
+
+    @Override
+    public void deletePatient(PatientModel patientModel) {
+
     }
 }
