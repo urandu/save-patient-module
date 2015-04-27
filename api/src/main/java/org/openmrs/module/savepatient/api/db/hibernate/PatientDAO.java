@@ -45,7 +45,7 @@ public class PatientDAO implements SavePatientDAO {
 
     @Override
     public List<PatientModel> listPatients() {
-        return null;
+        return sessionFactory.getCurrentSession().createCriteria(PatientModel.class).list();
     }
 
     @Override
