@@ -24,7 +24,7 @@ import java.util.List;
 /**
  * It is a default implementation of  {@link SavePatientDAO}.
  */
-public class HibernateSavePatientDAO implements SavePatientDAO {
+public class PatientDAO implements SavePatientDAO {
 	protected final Log log = LogFactory.getLog(this.getClass());
 	
 	private SessionFactory sessionFactory;
