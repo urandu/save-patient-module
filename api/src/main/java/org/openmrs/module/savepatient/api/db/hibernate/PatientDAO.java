@@ -50,16 +50,18 @@ public class PatientDAO implements SavePatientDAO {
 
     @Override
     public PatientModel getPatient(Integer national_id) {
-        return null;
+        return (PatientModel)sessionFactory.getCurrentSession().get(PatientModel.class,national_id);
     }
 
     @Override
     public PatientModel savePatient(PatientModel patientModel) {
-        return null;
+        sessionFactory.getCurrentSession().save(patientModel);
+        return patientModel;
     }
 
     @Override
     public void deletePatient(PatientModel patientModel) {
+
 
     }
 }
